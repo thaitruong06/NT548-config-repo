@@ -196,5 +196,5 @@ spec:
   - name: containers
     expression: 'variables.podSpec.containers + (has(variables.podSpec.initContainers) ? variables.podSpec.initContainers : [])'
   validations:
-  - expression: variables.containers.all(c, c.image.startsWith('ghcr.io/quantran2510/') || c.image.startsWith('docker.io/nginxinc/'))
-    message: image must come from ghcr.io/quantran2510/ or docker.io/nginxinc/
+  - expression: variables.containers.all(c, c.image.startsWith('ghcr.io/thaitruong06/') || c.image.startsWith('ghcr.io/quantran2510/') || c.image.startsWith('docker.io/nginxinc/'))
+    message: image must come from ghcr.io/thaitruong06/, ghcr.io/quantran2510/ or docker.io/nginxinc/

@@ -14,7 +14,7 @@ spec:
       helm:
         valueFiles:
           - $values/platform/monitoring/prometheus-values.yaml
-    - repoURL: https://github.com/QuanTran2510/NT548-config-repo.git
+    - repoURL: https://github.com/thaitruong06/NT548-config-repo.git
       targetRevision: main
       ref: values
   destination:
@@ -35,7 +35,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuanTran2510/NT548-config-repo.git
+    repoURL: https://github.com/thaitruong06/NT548-config-repo.git
     targetRevision: main
     path: platform/monitoring/grafana
   destination:
