@@ -5,6 +5,7 @@ image:
   tag: "v4"
 containerPort: 80
 probes:
+  enabled: false
   path: /
 env:
   - name: REDIS_HOST

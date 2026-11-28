@@ -37,6 +37,7 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           resources:
             {{- toYaml (required "resources must be set" .Values.resources) | nindent 12 }}
+          {{- if .Values.probes.enabled }}
           readinessProbe:
             httpGet:
               path: {{ .Values.probes.path }}
@@ -47,3 +48,4 @@ spec:
               path: {{ .Values.probes.path }}
               port: http
             initialDelaySeconds: {{ add .Values.probes.initialDelaySeconds 10 }}
+          {{- end }}

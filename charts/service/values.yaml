@@ -27,6 +27,7 @@ securityContext:
     drop: ["ALL"]
 
 probes:
+  enabled: true
   path: /
   initialDelaySeconds: 3
 
